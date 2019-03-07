@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kreativity-ui.iml" filepath="$PROJECT_DIR$/.idea/modules/kreativity-ui.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kreativity-ui_main.iml" filepath="$PROJECT_DIR$/.idea/modules/kreativity-ui_main.iml" group="kreativity-ui" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kreativity-ui_test.iml" filepath="$PROJECT_DIR$/.idea/modules/kreativity-ui_test.iml" group="kreativity-ui" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.katzstudio.kreativity-ui.iml" filepath="$PROJECT_DIR$/.idea/modules/com.katzstudio.kreativity-ui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.katzstudio.kreativity-ui.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.katzstudio.kreativity-ui.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.katzstudio.kreativity-ui.test.iml" filepath="$PROJECT_DIR$/.idea/modules/com.katzstudio.kreativity-ui.test.iml" />
     </modules>
   </component>
 </project>
