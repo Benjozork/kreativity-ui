@@ -138,7 +138,7 @@ public class KrCanvasTest {
 
         canvas.keyPressed(new KrKeyEvent(KrKeyEvent.Type.PRESSED, 120, "x", false, false, false));
 
-        verify(widget).handle(eq(new KrKeyEvent(KrKeyEvent.Type.PRESSED, 120, "x")));
+        verify(widget).handle(eq(new KrKeyEvent(KrKeyEvent.Type.PRESSED, 120, "x", false, false, false)));
     }
 
     @Test
@@ -151,7 +151,7 @@ public class KrCanvasTest {
         reset(widget);
         canvas.keyPressed(new KrKeyEvent(KrKeyEvent.Type.RELEASED, 52, "", false, false, false));
 
-        verify(widget).handle(eq(new KrKeyEvent(KrKeyEvent.Type.RELEASED, 52, "")));
+        verify(widget).handle(eq(new KrKeyEvent(KrKeyEvent.Type.RELEASED, 52, "", false, false, false)));
     }
 
     @Test

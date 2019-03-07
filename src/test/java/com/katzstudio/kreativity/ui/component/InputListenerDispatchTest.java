@@ -40,7 +40,7 @@ public class InputListenerDispatchTest {
     @Test
     public void testMouseMoveListener() {
         KrMouseListener listener = mock(KrMouseListener.class);
-        KrMouseEvent event = new KrMouseEvent(KrMouseEvent.Type.MOVED, null, null, null);
+        KrMouseEvent event = new KrMouseEvent(KrMouseEvent.Type.MOVED, null, null, null, false, false, false);
 
         testObject.addMouseListener(listener);
         testObject.handle(event);
@@ -73,7 +73,7 @@ public class InputListenerDispatchTest {
     @Test
     public void testMousePressedListener() {
         KrMouseListener listener = mock(KrMouseListener.class);
-        KrMouseEvent event = new KrMouseEvent(KrMouseEvent.Type.PRESSED, KrMouseEvent.Button.LEFT, new Vector2(10, 10), new Vector2(100, 200));
+        KrMouseEvent event = new KrMouseEvent(KrMouseEvent.Type.PRESSED, KrMouseEvent.Button.LEFT, new Vector2(10, 10), new Vector2(100, 200), false, false, false);
 
         testObject.addMouseListener(listener);
         testObject.handle(event);
@@ -84,7 +84,7 @@ public class InputListenerDispatchTest {
     @Test
     public void testMouseReleasedListener() {
         KrMouseListener listener = mock(KrMouseListener.class);
-        KrMouseEvent event = new KrMouseEvent(KrMouseEvent.Type.RELEASED, null, null, null);
+        KrMouseEvent event = new KrMouseEvent(KrMouseEvent.Type.RELEASED, null, null, null, false, false, false);
 
         testObject.addMouseListener(listener);
         testObject.handle(event);
@@ -106,7 +106,7 @@ public class InputListenerDispatchTest {
     @Test
     public void testKeyPressedListener() {
         KrKeyboardListener listener = mock(KrKeyboardListener.class);
-        KrKeyEvent event = new KrKeyEvent(KrKeyEvent.Type.PRESSED, 0, "x");
+        KrKeyEvent event = new KrKeyEvent(KrKeyEvent.Type.PRESSED, 0, "x", false, false, false);
 
         testObject.addKeyboardListener(listener);
         testObject.handle(event);
@@ -117,7 +117,7 @@ public class InputListenerDispatchTest {
     @Test
     public void testKeyReleasedListener() {
         KrKeyboardListener listener = mock(KrKeyboardListener.class);
-        KrKeyEvent event = new KrKeyEvent(KrKeyEvent.Type.RELEASED, 0, "x");
+        KrKeyEvent event = new KrKeyEvent(KrKeyEvent.Type.RELEASED, 0, "x", false, false, false);
 
         testObject.addKeyboardListener(listener);
         testObject.handle(event);
@@ -150,7 +150,7 @@ public class InputListenerDispatchTest {
     @Test
     public void testDoubleClickListener() {
         KrMouseListener listener = mock(KrMouseListener.class);
-        KrMouseEvent event = new KrMouseEvent(KrMouseEvent.Type.DOUBLE_CLICK, KrMouseEvent.Button.LEFT, new Vector2(10, 10), new Vector2(200, 200));
+        KrMouseEvent event = new KrMouseEvent(KrMouseEvent.Type.DOUBLE_CLICK, KrMouseEvent.Button.LEFT, new Vector2(10, 10), new Vector2(200, 200), false, false, false);
 
         testObject.addMouseListener(listener);
         testObject.handle(event);

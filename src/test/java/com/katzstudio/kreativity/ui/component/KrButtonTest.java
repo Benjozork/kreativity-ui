@@ -49,7 +49,7 @@ public class KrButtonTest {
 
     @Test
     public void testDrawPressed() throws Exception {
-        button.handle(new KrMouseEvent(KrMouseEvent.Type.PRESSED, KrMouseEvent.Button.LEFT, null, null));
+        button.handle(new KrMouseEvent(KrMouseEvent.Type.PRESSED, KrMouseEvent.Button.LEFT, null, null, false, false, false));
         button.drawSelf(renderer);
         verifyRendererCalledWithDrawable(buttonStyle.backgroundArmed);
     }
@@ -64,7 +64,7 @@ public class KrButtonTest {
     @Test
     public void testDrawAfterExit() {
         button.handle(new KrEnterEvent());
-        button.handle(new KrMouseEvent(KrMouseEvent.Type.PRESSED, KrMouseEvent.Button.LEFT, null, null));
+        button.handle(new KrMouseEvent(KrMouseEvent.Type.PRESSED, KrMouseEvent.Button.LEFT, null, null, false, false, false));
         button.handle(new KrExitEvent());
 
         button.drawSelf(renderer);
@@ -74,8 +74,8 @@ public class KrButtonTest {
     @Test
     public void testDrawAfterClick() throws Exception {
         button.handle(new KrEnterEvent());
-        button.handle(new KrMouseEvent(KrMouseEvent.Type.PRESSED, KrMouseEvent.Button.LEFT, null, null));
-        button.handle(new KrMouseEvent(KrMouseEvent.Type.RELEASED, KrMouseEvent.Button.LEFT, null, null));
+        button.handle(new KrMouseEvent(KrMouseEvent.Type.PRESSED, KrMouseEvent.Button.LEFT, null, null, false, false, false));
+        button.handle(new KrMouseEvent(KrMouseEvent.Type.RELEASED, KrMouseEvent.Button.LEFT, null, null, false, false, false));
 
         button.drawSelf(renderer);
         verifyRendererCalledWithDrawable(buttonStyle.backgroundNormal);
@@ -85,14 +85,14 @@ public class KrButtonTest {
     public void testClickEvent() throws Exception {
         KrButton.KrButtonListener listener = mock(KrButton.KrButtonListener.class);
         button.addListener(listener);
-        button.handle(new KrMouseEvent(KrMouseEvent.Type.PRESSED, KrMouseEvent.Button.LEFT, null, null));
-        button.handle(new KrMouseEvent(KrMouseEvent.Type.RELEASED, KrMouseEvent.Button.LEFT, null, null));
+        button.handle(new KrMouseEvent(KrMouseEvent.Type.PRESSED, KrMouseEvent.Button.LEFT, null, null, false, false, false));
+        button.handle(new KrMouseEvent(KrMouseEvent.Type.RELEASED, KrMouseEvent.Button.LEFT, null, null, false, false, false));
         verify(listener).clicked();
     }
 
     @Test
     public void testMouseLeaveWhileArmed() throws Exception {
-        button.handle(new KrMouseEvent(KrMouseEvent.Type.PRESSED, KrMouseEvent.Button.LEFT, null, null));
+        button.handle(new KrMouseEvent(KrMouseEvent.Type.PRESSED, KrMouseEvent.Button.LEFT, null, null, false, false, false));
         button.drawSelf(renderer);
         verifyRendererCalledWithDrawable(buttonStyle.backgroundArmed);
         reset(renderer);
