@@ -15,4 +15,5 @@ public class KrContext {
     @Getter private final Stage stage;
 
     @Getter private final Skin skin;
+
 }

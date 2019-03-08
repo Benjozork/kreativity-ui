@@ -21,7 +21,6 @@ data class KrMouseEvent (
 
     val isShiftDown: Boolean = false
 
-
 ) : KrEvent() {
 
     enum class Type {
